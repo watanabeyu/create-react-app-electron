@@ -1,0 +1,6 @@
+{
+  "environment": "production",
+  "apiURL": "https://xxxxxx",
+  "foo": "barbar",
+  "hoge": "hogehogehoge"
+}

@@ -1,0 +1,6 @@
+{
+  "environment": "development",
+  "apiURL": "https://xxxxxx",
+  "foo": "bar",
+  "hoge": "hogehoge"
+}

@@ -1,0 +1,15 @@
+appId: your.appId
+artifactName: ${productName}.${ext}
+forceCodeSigning: false
+buildVersion: v0.0.0
+productName: PRODUCT_NAME
+copyright: Copyright © xxxxxx
+directories:
+  output: release
+files:
+  - from: .
+    filter:
+      - package.json
+      - build
+      - node_modules
+publish: null

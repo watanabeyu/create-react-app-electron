@@ -1,0 +1,60 @@
+{
+  "name": "create-react-electron-app",
+  "version": "1.0.0",
+  "private": true,
+  "homepage": "./",
+  "scripts": {
+    "electron": "webpack && electron build/electron.js",
+    "dev": "BROWSER=none APP_ENV=development react-app-rewired start",
+    "prod": "BROWSER=none APP_ENV=production react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "prepackage:production": "APP_ENV=production react-app-rewired build && NODE_ENV=production APP_ENV=production webpack",
+    "package:production": "electron-builder --config ./config/electron-builder.production.yml --mac --x64",
+    "prepackage:development": "APP_ENV=development react-app-rewired build && NODE_ENV=production APP_ENV=development webpack",
+    "package:development": "electron-builder --config ./config/electron-builder.development.yml --mac --x64",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.0",
+    "@testing-library/react": "^10.4.3",
+    "@testing-library/user-event": "^12.0.11",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.3",
+    "@types/node": "^14.0.14",
+    "@types/react": "^16.9.41",
+    "@types/react-dom": "^16.9.8",
+    "electron": "^9.0.5",
+    "electron-builder": "^22.7.0",
+    "electron-devtools-installer": "^3.1.0",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.0.5",
+    "react-app-rewired": "^2.1.6",
+    "stylelint": "^13.6.1",
+    "stylelint-config-recommended-scss": "^4.2.0",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-scss": "^3.18.0",
+    "typescript": "~3.9.6",
+    "webpack-cli": "^3.3.12"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
